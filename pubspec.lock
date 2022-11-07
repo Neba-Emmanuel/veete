@@ -102,16 +102,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-<<<<<<< Updated upstream
-=======
-  page_transition:
-    dependency: transitive
-    description:
-      name: page_transition
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.9"
->>>>>>> Stashed changes
   path:
     dependency: transitive
     description:
@@ -119,16 +109,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.1"
-<<<<<<< Updated upstream
-=======
-  percent_indicator:
-    dependency: "direct main"
-    description:
-      name: percent_indicator
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.4.0"
->>>>>>> Stashed changes
   sky_engine:
     dependency: transitive
     description: flutter
