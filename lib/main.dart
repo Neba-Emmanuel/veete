@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
                   Text(
-                    'HI Emmanuel',
+                    'Hi, Emmanuel',
                     style: TextStyle(
                       fontSize: 18,
                       color: COLORS.kOriginal,
@@ -92,9 +92,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const SizedBox(height: 48),
                     const Text(
-                      'SERVICES',
+                      'CATALOG',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 16,
                         color: COLORS.kOriginal,
                         fontWeight: FontWeight.bold,
                       ),
@@ -118,8 +118,8 @@ class _HomePageState extends State<HomePage> {
                           },
                           icon: 'assets/images/living_room.png',
                           title: 'LIVING ROOM',
-                          color: COLORS.kOriginal,
-                          fontColor: Colors.white,
+                          // color: COLORS.kOriginal,
+                          // fontColor: Colors.white,
                         ),
                       ],
                     ),
@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
     required String title,
     required String icon,
     VoidCallback? onTap,
-    Color color = COLORS.kGreyColor,
+    Color color = COLORS.kPrimaryColor,
     Color fontColor = COLORS.kBlackColor,
   }) {
     return GestureDetector(
@@ -165,6 +165,7 @@ class _HomePageState extends State<HomePage> {
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: COLORS.kOriginal),
         ),
         child: Column(
           children: [
