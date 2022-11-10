@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:veete/widgets/colors.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class TemperaturePage extends StatefulWidget {
@@ -56,7 +57,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
                       radius: 90,
                       lineWidth: 14,
                       percent: 0.75,
-                      progressColor: Colors.indigo,
+                      progressColor: COLORS.kOriginal,
                       center: const Text(
                         '26\u00B0',
                         style: TextStyle(
@@ -70,7 +71,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
                       child: Text(
                         'TEMPERATURE',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.black54),
+                            fontWeight: FontWeight.bold, color: COLORS.kBlackColor),
                       ),
                     ),
                     const SizedBox(height: 32),
@@ -85,7 +86,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 18),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: COLORS.kPrimaryColor,
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Column(
@@ -125,7 +126,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
                     Container(
                       padding: const EdgeInsets.symmetric(vertical: 18),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: COLORS.kPrimaryColor,
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Column(
@@ -190,7 +191,7 @@ class _TemperaturePageState extends State<TemperaturePage> {
         Container(
           padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
-            color: isActive ? Colors.indigo : Colors.white,
+            color: isActive ? COLORS.kOriginal : COLORS.kPrimaryColor,
             borderRadius: BorderRadius.circular(18),
           ),
           child: Image.asset(
@@ -220,12 +221,12 @@ class _TemperaturePageState extends State<TemperaturePage> {
       decoration: BoxDecoration(
         color: isActive ? Colors.indigo : Colors.transparent,
         borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: Colors.indigo),
+        border: Border.all(color: COLORS.kOriginal),
       ),
       child: Text(
         title,
         style: TextStyle(
-          color: isActive ? Colors.white : Colors.black,
+          color: isActive ? COLORS.kPrimaryColor : COLORS.kBlackColor,
         ),
       ),
     );
