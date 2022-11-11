@@ -2,17 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:veete/widgets/colors.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:veete/widgets/colors.dart';
 
-class LivingroomPage extends StatefulWidget {
-  const LivingroomPage({Key? key}) : super(key: key);
+class KitchenPage extends StatefulWidget {
+  const KitchenPage({Key? key}) : super(key: key);
 
   @override
-  _LivingroomPageState createState() => _LivingroomPageState();
+  _KitchenPageState createState() => _KitchenPageState();
 }
 
-class _LivingroomPageState extends State<LivingroomPage> {
+class _KitchenPageState extends State<KitchenPage> {
   double heating = 12;
   double fan = 15;
   @override
@@ -124,41 +124,6 @@ class _LivingroomPageState extends State<LivingroomPage> {
                     ),
                     const SizedBox(height: 24),
                     Container(
-                      margin: const EdgeInsets.symmetric(vertical: 6),
-                      padding: const EdgeInsets.symmetric(vertical: 24),
-                      decoration: BoxDecoration(
-                        color: COLORS.kPrimaryColor,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 24),
-                            child: Text(
-                              'BULB',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child:
-                            Switch(
-                              onChanged: toggleSwitch,
-                              activeColor: COLORS.kVeryLight,
-                              inactiveThumbColor: COLORS.kVeryLight,
-                              inactiveTrackColor: Colors.blue,
-                              value: isSwitched,
-                            ),
-                          )
-
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 24),
-                    Container(
                       padding: const EdgeInsets.symmetric(vertical: 18),
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -215,20 +180,6 @@ class _LivingroomPageState extends State<LivingroomPage> {
         ),
       ),
     );
-  }
-
-  bool isSwitched = false;
-  void toggleSwitch(bool value){
-    if(isSwitched == false){
-      setState((){
-        isSwitched = true;
-      });
-    }
-    else{
-      setState((){
-        isSwitched = false;
-      });
-    }
   }
 
   Widget _fan({

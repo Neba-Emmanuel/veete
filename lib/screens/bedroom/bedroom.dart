@@ -2,17 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:veete/widgets/colors.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:veete/widgets/colors.dart';
 
-class LivingroomPage extends StatefulWidget {
-  const LivingroomPage({Key? key}) : super(key: key);
+class BedroomPage extends StatefulWidget {
+  const BedroomPage({Key? key}) : super(key: key);
 
   @override
-  _LivingroomPageState createState() => _LivingroomPageState();
+  _BedroomPageState createState() => _BedroomPageState();
 }
 
-class _LivingroomPageState extends State<LivingroomPage> {
+class _BedroomPageState extends State<BedroomPage> {
   double heating = 12;
   double fan = 15;
   @override
@@ -123,81 +123,6 @@ class _LivingroomPageState extends State<LivingroomPage> {
                       ),
                     ),
                     const SizedBox(height: 24),
-                    Container(
-                      margin: const EdgeInsets.symmetric(vertical: 6),
-                      padding: const EdgeInsets.symmetric(vertical: 24),
-                      decoration: BoxDecoration(
-                        color: COLORS.kPrimaryColor,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 24),
-                            child: Text(
-                              'BULB',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child:
-                            Switch(
-                              onChanged: toggleSwitch,
-                              activeColor: COLORS.kVeryLight,
-                              inactiveThumbColor: COLORS.kVeryLight,
-                              inactiveTrackColor: Colors.blue,
-                              value: isSwitched,
-                            ),
-                          )
-
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 24),
-                    Container(
-                      padding: const EdgeInsets.symmetric(vertical: 18),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 24),
-                            child: Text(
-                              'FAN SPEED',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                          Slider(
-                            value: fan,
-                            onChanged: (newFan) {
-                              setState(() => fan = newFan);
-                            },
-                            max: 30,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 24),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text('LOW'),
-                                Text('MID'),
-                                Text('HIGH'),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 24),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -215,20 +140,6 @@ class _LivingroomPageState extends State<LivingroomPage> {
         ),
       ),
     );
-  }
-
-  bool isSwitched = false;
-  void toggleSwitch(bool value){
-    if(isSwitched == false){
-      setState((){
-        isSwitched = true;
-      });
-    }
-    else{
-      setState((){
-        isSwitched = false;
-      });
-    }
   }
 
   Widget _fan({

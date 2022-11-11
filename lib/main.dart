@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:veete/screens/bathroom/bathroom.dart';
+import 'package:veete/screens/bedroom/bedroom.dart';
+import 'package:veete/screens/kitchen/kitchen.dart';
 import 'package:veete/screens/living_room/living_room.dart';
 import 'package:veete/widgets/constant.dart';
 import 'package:veete/widgets/colors.dart';
@@ -104,6 +107,14 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         _cardMenu(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const BedroomPage(),
+                              ),
+                            );
+                          },
                           icon: 'assets/images/bed_room.png',
                           title: ' BED ROOM',
                         ),
@@ -112,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const TemperaturePage(),
+                                builder: (context) => const LivingroomPage(),
                               ),
                             );
                           },
@@ -128,10 +139,26 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         _cardMenu(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const KitchenPage(),
+                              ),
+                            );
+                          },
                           icon: 'assets/images/kitchen.png',
                           title: 'KITCHEN',
                         ),
                         _cardMenu(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const BathroomPage(),
+                              ),
+                            );
+                          },
                           icon: 'assets/images/bathroom.png',
                           title: 'BATH ROOM',
                         ),
