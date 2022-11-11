@@ -124,41 +124,36 @@ class _TemperaturePageState extends State<TemperaturePage> {
                     ),
                     const SizedBox(height: 24),
                     Container(
-                      padding: const EdgeInsets.symmetric(vertical: 18),
+                      margin: const EdgeInsets.symmetric(vertical: 6),
+                      padding: const EdgeInsets.symmetric(vertical: 24),
                       decoration: BoxDecoration(
                         color: COLORS.kPrimaryColor,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: Column(
+                      child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           const Padding(
                             padding: EdgeInsets.symmetric(horizontal: 24),
                             child: Text(
-                              'FAN SPEED',
+                              'BULB',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
-                          Slider(
-                            value: fan,
-                            onChanged: (newFan) {
-                              setState(() => fan = newFan);
-                            },
-                            max: 30,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 24),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Text('LOW'),
-                                Text('MID'),
-                                Text('HIGH'),
-                              ],
+                          Center(
+                            child:
+                            Switch(
+                              onChanged: toggleSwitch,
+                              activeColor: COLORS.kVeryLight,
+                              inactiveThumbColor: COLORS.kVeryLight,
+                              inactiveTrackColor: Colors.blue,
+                              value: isSwitched,
                             ),
                           )
+
                         ],
                       ),
                     ),
@@ -180,6 +175,20 @@ class _TemperaturePageState extends State<TemperaturePage> {
         ),
       ),
     );
+  }
+
+  bool isSwitched = false;
+  void toggleSwitch(bool value){
+    if(isSwitched == false){
+      setState((){
+        isSwitched = true;
+      });
+    }
+    else{
+      setState((){
+        isSwitched = false;
+      });
+    }
   }
 
   Widget _fan({
