@@ -5,14 +5,14 @@ import 'package:flutter/rendering.dart';
 import 'package:veete/widgets/colors.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
-class TemperaturePage extends StatefulWidget {
-  const TemperaturePage({Key? key}) : super(key: key);
+class LivingroomPage extends StatefulWidget {
+  const LivingroomPage({Key? key}) : super(key: key);
 
   @override
-  _TemperaturePageState createState() => _TemperaturePageState();
+  _LivingroomPageState createState() => _LivingroomPageState();
 }
 
-class _TemperaturePageState extends State<TemperaturePage> {
+class _LivingroomPageState extends State<LivingroomPage> {
   double heating = 12;
   double fan = 15;
   @override
@@ -154,6 +154,46 @@ class _TemperaturePageState extends State<TemperaturePage> {
                             ),
                           )
 
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 18),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 24),
+                            child: Text(
+                              'FAN SPEED',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Slider(
+                            value: fan,
+                            onChanged: (newFan) {
+                              setState(() => fan = newFan);
+                            },
+                            max: 30,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 24),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: const [
+                                Text('LOW'),
+                                Text('MID'),
+                                Text('HIGH'),
+                              ],
+                            ),
+                          )
                         ],
                       ),
                     ),
