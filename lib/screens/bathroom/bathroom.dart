@@ -38,6 +38,13 @@ class _BathroomPageState extends State<BathroomPage> {
                       color: Colors.indigo,
                     ),
                   ),
+                  const Center(
+                    child: Text(
+                      'BATHROOM',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: COLORS.kOriginal),
+                    ),
+                  ),
                   const RotatedBox(
                     quarterTurns: 135,
                     child: Icon(

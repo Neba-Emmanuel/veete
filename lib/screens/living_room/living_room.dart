@@ -38,6 +38,13 @@ class _LivingroomPageState extends State<LivingroomPage> {
                       color: Colors.indigo,
                     ),
                   ),
+                  const Center(
+                    child: Text(
+                      'LIVING ROOM',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: COLORS.kOriginal),
+                    ),
+                  ),
                   const RotatedBox(
                     quarterTurns: 135,
                     child: Icon(
