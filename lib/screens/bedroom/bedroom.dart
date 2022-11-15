@@ -38,6 +38,13 @@ class _BedroomPageState extends State<BedroomPage> {
                       color: Colors.indigo,
                     ),
                   ),
+                  const Center(
+                    child: Text(
+                      'BED ROOM',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: COLORS.kOriginal),
+                    ),
+                  ),
                   const RotatedBox(
                     quarterTurns: 135,
                     child: Icon(
