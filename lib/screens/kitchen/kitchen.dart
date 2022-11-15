@@ -38,6 +38,13 @@ class _KitchenPageState extends State<KitchenPage> {
                       color: Colors.indigo,
                     ),
                   ),
+                  const Center(
+                    child: Text(
+                      'KITCHEN',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: COLORS.kOriginal),
+                    ),
+                  ),
                   const RotatedBox(
                     quarterTurns: 135,
                     child: Icon(
