@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "74597899679",
+    "firebase_url": "https://veete-68a78-default-rtdb.firebaseio.com",
+    "project_id": "veete-68a78",
+    "storage_bucket": "veete-68a78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74597899679:android:23d801d97170f52ee5b1aa",
+        "android_client_info": {
+          "package_name": "com.example.veete"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74597899679-a7vpibmpkorcniuhhkqkolpsppktgbra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj0lE032-jDEXwsMnturd3HiruiZ9wkbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74597899679-a7vpibmpkorcniuhhkqkolpsppktgbra.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "74597899679-urlvemo0ueot73q8jm198o24mf1usej8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.veete"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
