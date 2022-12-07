@@ -6,10 +6,16 @@ import 'package:veete/screens/living_room/living_room.dart';
 import 'package:veete/widgets/constant.dart';
 import 'package:veete/widgets/colors.dart';
 import 'navigation/navigate.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const MyApp());
 }
